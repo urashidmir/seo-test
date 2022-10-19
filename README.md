@@ -7,6 +7,8 @@ Using the data returned from the API, please add structured data with a review s
 https://developers.google.com/search/docs/data-types/review-snippet
 Example of current structured data code for pros and cons
 
+On the products array there is an object called information, this is where you will find the product pros and cons objects.
+
 ## User story
 
 As Head of Audience, I want Pros and Cons articles to be recognised as pros and cons by Google so that they display as pros and cons snippets in search results.
@@ -14,6 +16,5 @@ As Head of Audience, I want Pros and Cons articles to be recognised as pros and 
 ## Acceptance criteria
 
 1 - Create a component that renders valid structured data (https://developers.google.com/search/docs/data-types/review-snippet)
-2 - Create a valid unit test that ensures when there is a valid pros and cons array comming from the api response the application will correctly render the structured data.
 
-On the products array there is an object called information, this is where you will find the product pros and cons fields.
+2 - Create a valid unit test that ensures when there is a valid pros and cons array comming from the api response the application will correctly render the structured data.
