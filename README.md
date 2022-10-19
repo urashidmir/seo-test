@@ -7,7 +7,7 @@ Using the data returned from the API, please add structured data with a review s
 https://developers.google.com/search/docs/data-types/review-snippet
 Example of current structured data code for pros and cons
 
-On the products array there is an object called information, this is where you will find the product pros and cons objects.
+On the products array returned by the API there is an object called information, this is where you will find the product pros and cons fields.
 
 ## User story
 
