@@ -4,9 +4,9 @@ import type {
   NextPage,
 } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import axios from "axios";
+import data from "../data.json";
+
 const Article: NextPage = ({
   extra,
   products,
@@ -35,15 +35,11 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   context.res.setHeader("Content-Security-Policy", `frame-ancestors 'self';`);
 
   try {
-    const articleData = async () => {
-      const res = await axios.get(
-        `https://indy-api-dev.brightsites.co.uk/api/independent.co.uk?path=extras/indybest/gadgets-tech/phones-accessories/best-budget-smartphone-cheap-b1843598.html`
-      );
-      return res.data;
+    return {
+      props: {
+        ...data,
+      },
     };
-
-    const props = await articleData();
-    return { props };
   } catch (err) {
     return { props: { data: "err" } };
   }
