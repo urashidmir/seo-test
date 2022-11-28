@@ -6,6 +6,7 @@ import type {
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import data from "../data.json";
+import StructuredData from "../components/StructuredData";
 
 const Article: NextPage = ({
   extra,
@@ -17,6 +18,7 @@ const Article: NextPage = ({
         <title>Brightsites seo test</title>
         <meta name="description" content="Brightsites seo test" />
         <link rel="icon" href="/favicon.ico" />
+        <StructuredData products={products} />
       </Head>
 
       <main className={styles.main}>
