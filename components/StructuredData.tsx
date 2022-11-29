@@ -28,13 +28,14 @@ const StructuredData = ({products}:{products: any}) => {
                 return item;
             }):null;
 
-            const negativeList = cons.map((con: any, index: number) =>{
+            const negativeList = cons ? cons.map((con: any, index: number) =>{
                 return {
                     "@type": "ListItem",
                     "position": index+1,
                     "name": con
                     }
-            });
+            }):null;
+
             const entry = {
                 "@context": "https://schema.org/",
                 "@type": "Product",
@@ -71,6 +72,7 @@ const StructuredData = ({products}:{products: any}) => {
             "@type": "ItemList",
             "itemListElement" : productsArray
         };
+
         return structuredData;
     }
     return (
