@@ -47,14 +47,14 @@ const invalidData = [
     }
   ];
 
-describe('Testing will valid data', () => {
-  it('Should render structured data', () => {
+describe('Testing with valid data', () => {
+  it('Should render structured data script', () => {
     const { container } = render(<StructuredData products={validData} />);
     expect(container.firstElementChild?.id.startsWith('structured-data'));
   });
 });
 
-describe('Testing will invalid data', () => {
+describe('Testing with invalid data', () => {
   it('Should render null', () => {
     const { container } = render(<StructuredData products={invalidData} />);
     expect(container).toBeEmptyDOMElement();
