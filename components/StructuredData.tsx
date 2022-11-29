@@ -80,7 +80,6 @@ const StructuredData = ({products}:{products: any}) => {
            {products && valid ?
                 <script
                     id = "structured-data"
-                    key="structured-data"
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(getStructuredData(products)) }}
                 />
