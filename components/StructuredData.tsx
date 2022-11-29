@@ -10,7 +10,7 @@ const StructuredData = ({products}:{products: any}) => {
                 element.data.information.pros.pros
                 : null;
             const cons = element.data.information.cons
-                && element.data.information.cons ?
+                && element.data.information.cons.cons ?
                 element.data.information.cons.cons
                 : null;
             if(!pros){
